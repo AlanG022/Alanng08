@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+    *{
+    margin: 0;
+    padding: 0;
+    }
+
+body { 
+    font-family: 'Roboto' sans-serif;
+}
+header .hamburguesa {
+    font-size: 30px;
+    align-items: center;
+    display: none;
+}
+header.centro {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 30px; 
+    background-color: rgb(115, 116, 113);
+}
+header div img { 
+    width: 100px;
+    border-radius: 200px;
+}
+header nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none; 
+}
+
+header nav ul li.submenu {
+    position: relative;
+}
+
+header nav ul { 
+    display: flex;
+    align-items: center;
+}
+
+/* El submenu se oculta por defecto */
+header nav ul li.submenu > ul {
+    display: none;
+    position: absolute;
+    top: 20px;        /* baja el menú */
+    left: 0;
+    background-color: rgb(115, 116, 113);  /* fondo para que se vea */
+    list-style: none;
+    
+}
+
+/* Cuando paso el mouse por el li, aparece */
+header nav ul li.submenu:hover > ul {
+    display: block;
+}
+
+header nav ul li a{
+    text-decoration: none; 
+    color: rgb(29, 28, 28);
+} 
+
+
+.home-body {
+    background-color: #4e4b4e;
+}
+
+
+/*main/ grilla de imagenes*/
+.grilla {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-areas:
+"portafolio3 portfolio2"
+"portafolio3 portfolio4"
+"portafolio1 portfolio4";
+width: 100%;
+gap: 20px;
+justify-content: center;
+margin-top: 30px;
+}
+
+.caja1 { 
+    grid-area:portafolio1;
+}
+.caja2 {
+    grid-area:portfolio2;
+}
+.caja3 {
+    grid-area:portfolio3;
+}
+.caja4 {
+    grid-area:portafolio4;
+}
+
+.grilla div img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+
+
+
+
+
+    @media (max-width: 775px){
+    header .hamburguesa{
+        display: block; 
+    }
+    header nav {
+        display: none;
+    } 
+    }
