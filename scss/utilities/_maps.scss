@@ -1,0 +1,11 @@
+@use '../base/variables' as vars;
+
+$colores: (
+  primario: vars.$color-principal,
+  secundario: vars.$color-hover
+);
+$colores: (
+  primary: vars.$color-principal,
+  secondary: #333,
+  background: #f9f9f9
+);

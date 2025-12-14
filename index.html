@@ -1,43 +1,141 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta name="description" content="Recetas caseras fáciles y rápidas para cocinar en casa. Comidas y postres simples para toda la familia.">
+    <meta name="keywords" content="recetas caseras, comidas faciles, postres, cocinar en casa">
+    <meta name="author" content="Como en Casa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/menu.js"></script>
+    
     <title>Como en Casa</title>
 </head>
+
 <body class="home-body">
-    <!-- paginas de navegacion -->
+
+    <!-- HEADER -->
     <header class="centro">
-        <div>
-            <img src="assets/image/logocoina.jpeg" width="80" alt="Logo de ComoEnCasa">
+        <div class="logo">
+            <img src="assets/image/logocoina.jpeg" width="80" alt="Logo de Como en Casa">
         </div>
 
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">ComoEncasa</a></li>
+                <li><a href="index.html">ComoEnCasa</a></li>
 
-                <!-- ESTE ES EL CORRECTO -->
                 <li class="submenu">
-                    <a href="#">Comidas<i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="./pages/comidas.html">
+                        Comidas <i class="fa-solid fa-chevron-down"></i>
+                    </a>
                     <ul class="dropdown">
-                        <li><a href="#">Agregar recetas</a></li>
+                        <li><a href="./pages/recetas.html">Agregar recetas</a></li>
                     </ul>
-                    </li>
-                <li><a href="#">Postres</a></li>
-                <li><a href="#">Contacto</a></li>
+                </li>
+
+                <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li><a href="./pages/postres.html">Postres</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
+
         <i class="fa-solid fa-bars hamburguesa"></i>
     </header>
-    <!-- este es el cotenido principal -->
+
+    <!-- MAIN -->
     <main>
-        
+
+        <!-- IMAGEN PRINCIPAL / HERO -->
+        <section class="principal fade-in">
+            <div class="overlay"></div>
+            <img src="assets/image/cocinamenu1.jpg" alt="Persona cocinando">
+
+            <div class="texto-principal">
+                <h1>Como en Casa</h1>
+                <p>El sabor de lo simple, hecho con amor</p>
+                <a href="./assets/pages/comidas.html" class="btn-principal">
+                    Ver recetas
+                </a>
+            </div>
+        </section>
+
+        <!-- BLOQUES INTERCALADOS -->
+        <section class="bloques-cocina">
+
+            <!-- BLOQUE 1 -->
+            <article class="bloque fade-in">
+
+                <div class="bloque-img">
+                    <img src="assets/image/cocinamenu2.jpg" alt="Cocina casera">
+                    <a href="./assets/pages/comidas.html" class="btn-principal btn-img">
+                        Ver recetas
+                    </a>
+                </div>
+
+                <div class="bloque-texto">
+                    <h2>Cocina casera</h2>
+                    <p>
+                        Recetas pensadas para el día a día, con ingredientes simples
+                        y pasos claros para que cocinar sea un placer.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- BLOQUE 2 -->
+            <article class="bloque invertido fade-in">
+
+                <div class="bloque-img">
+                    <img src="assets/image/cocinamenu3.jpg" alt="Comidas rápidas">
+                    <a href="./assets/pages/comidas.html" class="btn-principal btn-img">
+                        Recetas rápidas
+                    </a>
+                </div>
+
+                <div class="bloque-texto">
+                    <h2>Comidas rápidas</h2>
+                    <p>
+                        Ideal para quienes tienen poco tiempo pero no quieren
+                        resignar sabor ni calidad en la mesa.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- BLOQUE 3 -->
+            <article class="bloque fade-in">
+
+                <div class="bloque-img">
+                    <img src="assets/image/cocinamenu4.jpg" alt="Recetas familiares">
+                    <a href="./assets/pages/comidas.html" class="btn-principal btn-img">
+                        Ver más
+                    </a>
+                </div>
+
+                <div class="bloque-texto">
+                    <h2>Recetas familiares</h2>
+                    <p>
+                        Platos que unen generaciones, perfectos para compartir
+                        momentos especiales alrededor de la mesa.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
     </main>
-    <!--este es el footer-->
+
+    <!-- FOOTER -->
     <footer>
-        <p>ComenEnCasa &copy; 2025</p>
+        <p>ComoEnCasa &copy; 2025</p>
     </footer>
+    <!-- ANTES DE CERRAR BODY -->
+<script src="./assets/js/menu.js"></script>
+</body>
+
+
 </body>
 </html>

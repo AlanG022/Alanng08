@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Como en Casa</title>
+</head>
+<body class="home-body">
+    <!-- paginas de navegacion -->
+    <header class="centro">
+        <div>
+            <img src="assets/image/logocoina.jpeg" width="80" alt="Logo de ComoEnCasa">
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">ComoEncasa</a></li>
+
+                <!-- ESTE ES EL CORRECTO -->
+                <li class="submenu">
+                    <a href="#">Comidas<i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Agregar recetas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Postres</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars hamburguesa"></i>
+    </header>
+    <!-- este es el cotenido principal -->
+    <main>
+        
+    </main>
+    <!--este es el footer-->
+    <footer>
+        <p>ComenEnCasa &copy; 2025</p>
+    </footer>
+</body>
+</html>
+
+    <main class="contacto">
+    <section class="contacto-info">
+    
+    <h1>Hablemos de tu próxima receta</h1>
+    <p>
+        ¿Tenés una consulta, sugerencia o querés compartir tu receta favorita?
+        Escribinos y te respondemos a la brevedad 🍲
+    </p>
+    <div class="datos-contacto">
+        <p><strong>Email:</strong> contacto@comoencasa.com</p>
+        <p><strong>Instagram:</strong> @comoencasa</p>
+    </div>
+    <form class="formulario">
+        <div class="fila">
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Apellido" required>
+        </div>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    </section>
+    <section class="contacto-imagen">
+    <img src="../../assets/image/contacto.jpg" alt="Persona cocinando en casa">
+    </section>
+</main>
+
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta name="description" content="Recetas caseras fáciles y rápidas para cocinar en casa. Comidas y postres simples para toda la familia.">
+    <meta name="keywords" content="recetas caseras, comidas faciles, postres, cocinar en casa">
+    <meta name="author" content="Como en Casa">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Como en Casa</title>
+</head>
+<body class="home-body">
+    <!-- paginas de navegacion -->
+    <header class="centro">
+        <div>
+            <img src="assets/image/logocoina.jpeg" width="80" alt="Logo de ComoEnCasa">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">ComoEncasa</a></li>
+                <!-- ESTE ES EL CORRECTO -->
+                <li class="submenu">
+                    <a href="./assets/pages/comidas.html">Comidas<i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./assets/pages/recetas.html">Agregar recetas</a></li>
+                    </ul>
+                    </li>
+                <li><a href="./assets/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="./assets/pages/postres.html">Postres</a></li>
+                <li><a href="./assets/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars hamburguesa"></i>
+    </header>
+    <section class="principal">
+    
+            <img src="assets/image/cocinamenu1.jpg" alt="persona lista para cocinar">
+            <h1>ComoEnCasa</h1>
+    </section>
+    <!-- este es el cotenido principal -->
+    <main>
+        <section class=" recetas-principales">
+            
+            <div class="caja2"> 
+            <img src="assets/image/cocinamenu2.jpg" alt="imagen2">
+            </div>
+            <div class="caja3">
+            <img src="assets/image/cocinamenu3.jpg" alt="imagen3">
+            </div>
+            <div class="caja4"> 
+            <img src="assets/image/cocinamenu4.jpg" alt="imagen4">
+            </div>
+        </section>
+    </main>
+    <!--este es el footer-->
+    
+    <main class="fade-in">
+    </main>
+    <footer>
+        <p>ComenEnCasa &copy; 2025</p>
+    </footer>
+</body>
+</html>
+@use 'base/generales';
+@use 'base/queries';
+@use 'base/variables';
+
+
+
+
+@use 'components/buttons';
+@use 'components/footer';
+@use 'components/header';
+
+
+@use 'pages/contacto';
+@use 'pages/index';
+
+
+@use 'sections/main';
+
+
+@use 'utilities/extend';
+@use 'utilities/maps';
+@use 'utilities/mixin';
+
+
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+  header .hamburguesa {
+  font-size: 45px;
+  justify-items: center;
+  display: none
+}
+
+
+header.centro {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 130px;
+  background-color: rgb(47, 92, 105);
+}
+
+header div img {
+  width: 100px;
+  border-radius: 200px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+header nav ul li.submenu {
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+/* El submenu se oculta por defecto */
+header nav ul li.submenu > ul {
+  display: none;
+  position: absolute;
+  top: 20px; /* baja el menú */
+  left: 0;
+  background-color: rgb(47, 92, 105);/* fondo para que se vea */
+  list-style: none;
+}
+
+/* Cuando paso el mouse por el li, aparece */
+header nav ul li.submenu:hover > ul {
+  display: block;
+
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(29, 28, 28);
+} 
+
+.home-body {
+  background-color: #6899af93;
+}
+
+/*main/ grilla de imagenes*/
+.recetas-principales {
+  display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+.recetas-principales div img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: rgb(47, 92, 105);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recetas-principales img,
+.postre img,
+.galeria img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recetas-principales img:hover,
+.postre img:hover,
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CONTACTO */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+.contacto-info {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contacto-info h1 {
+  font-size: 48px;
+}
+
+.contacto-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.datos-contacto p {
+  font-size: 14px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+.formulario .fila {
+  display: flex;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.formulario textarea {
+  resize: none;
+}
+
+.formulario button {
+  width: fit-content;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(47, 92, 105);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background-color: rgb(35, 70, 80);
+}
+
+/* IMAGEN */
+.contacto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* estilos responsivos */
+
+@media (max-width: 775px) {
+  header .hamburguesa {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+}
+  .hamburguesa {
+    display: none
+  }
+
+@media (max-width: 1150px) {
+  .body {
+    margin: 0 60px;
+  }
+  }
+  
+  section.principal { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+    padding-bottom: 105px;
+
+  }
+  section.principal h1 {
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    margin-top: 500px;
+    background-color: #000000a1;
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  @media (max-width: 768px) {
+  header.centro {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+/* CONTACTO CLEAN */
+.contacto-clean {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 80px 100px;
+  background-color: #fafafa;
+}
+
+.contacto-imagen {
+  grid-column: span 2;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.contacto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección de texto de contacto */
+.contacto-info h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.contacto-info p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* FORMULARIO */
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacto-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.contacto-form textarea {
+  resize: none;
+}
+
+.contacto-form button {
+  align-self: flex-start;
+  padding: 14px 36px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(47, 92, 105);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contacto-form button:hover {
+  background-color: rgb(35, 70, 80);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .contacto-clean {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .contacto-info h1 {
+    font-size: 36px;
+  }
+
+  .contacto-imagen {
+    height: 200px;
+  }
+}
+/* Animación banner */
+.contacto-imagen img {
+  animation: zoomFade 1.2s ease forwards;
+}
+
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+  
+.contacto-info,
+.contacto-form {
+  animation: slideUpFade 0.9s ease forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animaciones de botones */
+.contacto-form {
+  animation-delay: 0.2s;
+}
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  outline: none;
+  border-color: rgb(47, 92, 105);
+  box-shadow: 0 0 0 2px rgba(47, 92, 105, 0.15);
+  transition: all 0.3s ease;
+}
+
+.contacto-form button {
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s;
+}
+
+.contacto-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+.contacto-imagen {
+  width: 100%;
+  height: 500px;
+}
+
+.contacto-imagen img {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+.contacto-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.05)
+  );
+}
+
+/* HERO */
+.principal {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.principal img {
+    width: 80%;
+    height: 1500px;
+    object-fit: cover;
+}
+
+.principal .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+.texto-principal {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.texto-principal h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.texto-principal p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* RECETAS */
+.recetas-principales {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.recetas-principales h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.recetas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ANIMACIÓN */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.bloques-cocina {
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.bloque {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.bloque.invertido {
+    flex-direction: row-reverse;
+}
+
+.bloque-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+.bloque-texto {
+    max-width: 500px;
+}
+
+.bloque-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.bloque-img img {
+    width: 100%;
+    max-width: 600px;   /* antes 500px */
+    height: 350px;      /* fija altura para que se vean más grandes */
+    object-fit: cover;
+    border-radius: 20px;
+    max-width: 650px;
+    height: 380px;
+
+}
+
+.bloque-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-img {
+    margin-top: 15px;
+}
+/* HERO animación */
+.principal img {
+    animation: zoomHero 12s ease-in-out infinite alternate;
+}
+
+.texto-principal {
+    animation: textoHero 1.5s ease forwards;
+}
+
+@keyframes zoomHero {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes textoHero {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+/* Animación de entrada */
+.bloque {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 1s ease forwards;
+}
+
+.bloque:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.bloque:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.bloque:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.bloque-img img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.bloque-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* HAMBURGUESA */
+.hamburguesa {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hamburguesa {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s ease;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar.active {
+        height: 320px;
+    }
+
+    .submenu .dropdown {
+        position: static;
+    }
+}
+  /* Animación de entrada */ 
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* animacion de imagen lateral */
+.nosotros-img {
+    animation: slideLeft 1.2s ease forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* animacion de texto slide contrario*/
+
+.nosotros-texto {
+    animation: slideRight 1.2s ease forwards;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* animacion segundario */
+.hero-secundario h1 {
+    animation: aparecerTitulo 1s ease forwards;
+}
+
+.hero-secundario p {
+    animation: aparecerTexto 1.4s ease forwards;
+}
+
+@keyframes aparecerTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animacion de hover */
+.nosotros-img img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nosotros-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+
+.hero-secundario {
+    background: #f4f4f4;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.nosotros-contenido {
+    padding: 60px 10%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nosotros-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+}
+
+.nosotros-texto {
+    max-width: 500px;
+}
+
+
+/* Centrar texto desde Nuestra filosofía hacia abajo */
+.nosotros-filosofia,
+.nosotros-valores,
+.nosotros-cierre {
+    text-align: center;
+}
+
+.comidas-grid {
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.card p {
+    padding: 0 15px 20px;
+}
+
+.hero-postres {
+    background: linear-gradient(135deg, #f4f1ec, #e6dfd6);
+    padding: 80px 10%;
+    text-align: center;
+    color: #3a2f2f;
+}
+
+
+
+.postres-galeria {
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.postre {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.postre:hover {
+    transform: translateY(-10px);
+}
+
+.postre img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.postre-info {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hero-postres h1 {
+    letter-spacing: 1px;
+}
+
+.hero-postres p {
+    opacity: 0.8;
+}
+
+.postres-info {
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.postres-info-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.postres-info-texto p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.postres-info-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .postres-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+.postres-cierre {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: #f7f5f2;
+}
+
+.postres-cierre p {
+    margin: 20px 0 30px;
+    opacity: 0.85;
+}

@@ -1,0 +1,25 @@
+/* Carpeta base*/
+@use 'base/generales';
+@use 'base/queries';
+@use 'base/variables';
+
+
+/* Carpeta components*/
+@use 'components/buttons';
+@use 'components/footer';
+@use 'components/header';
+
+/* Carpeta pages*/
+
+@use 'pages/contacto';
+@use 'pages/index';
+
+/* Carpeta sections*/
+
+@use 'sections/main';
+
+/* Carpeta utilities*/ 
+
+@use 'utilities/extend';
+@use 'utilities/maps';
+@use 'utilities/mixin';

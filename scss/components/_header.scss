@@ -1,0 +1,83 @@
+@use '../base/variables' as vars;
+
+header {
+  background-color: vars.$color-principal;
+}
+
+header.centro {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 130px;
+  background-color: vars.$color-principal;
+}
+
+header div img {
+  width: 100px;
+  border-radius: 200px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+header nav ul li.submenu {
+  position: relative;
+}
+
+header nav ul li.submenu > ul {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: vars.$color-principal;
+  list-style: none;
+}
+
+header nav ul li.submenu:hover > ul {
+  display: block;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(29, 28, 28);
+}
+
+.hamburguesa {
+  display: none;
+  font-size: 45px;
+  cursor: pointer;
+}
+.centro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+
+  .logo img {
+    width: 80px;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .submenu .dropdown {
+    display: none;
+    position: absolute;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+}

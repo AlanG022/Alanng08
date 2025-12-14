@@ -1,113 +1,555 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-    *{
-    margin: 0;
-    padding: 0;
-    }
-
-body { 
-    font-family: 'Roboto' sans-serif;
+/* Carpeta base*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-header .hamburguesa {
-    font-size: 30px;
-    align-items: center;
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  flex: 1;
+}
+
+@media (max-width: 1150px) {
+  .body {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 775px) {
+  header .hamburguesa {
+    display: block;
+  }
+  header nav {
     display: none;
+  }
 }
+@media (max-width: 768px) {
+  header.centro {
+    padding: 20px;
+    gap: 15px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .contacto-clean {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .contacto-info h1 {
+    font-size: 36px;
+  }
+  .contacto-imagen {
+    height: 200px;
+  }
+  .postres-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hamburguesa {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+}
+/* Carpeta components*/
+.btn-principal {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #e63946;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.btn-principal:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.05);
+}
+
+.formulario button,
+.contacto-form button {
+  width: fit-content;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff6b6b;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.formulario button:hover,
+.contacto-form button:hover {
+  background-color: rgb(35, 70, 80);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-principal {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-principal:hover {
+  background-color: #ff3b3b;
+}
+
+footer {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+header {
+  background-color: #ff6b6b;
+}
+
 header.centro {
-    display: flex;
-    justify-content:space-between;
-    padding: 10px 30px; 
-    background-color: rgb(115, 116, 113);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 130px;
+  background-color: #ff6b6b;
 }
-header div img { 
-    width: 100px;
-    border-radius: 200px;
+
+header div img {
+  width: 100px;
+  border-radius: 200px;
 }
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
 header nav ul {
-    display: flex;
-    gap: 10px;
-    list-style: none; 
+  display: flex;
+  gap: 35px;
+  list-style: none;
 }
 
 header nav ul li.submenu {
-    position: relative;
+  position: relative;
 }
 
-header nav ul { 
-    display: flex;
-    align-items: center;
-}
-
-/* El submenu se oculta por defecto */
 header nav ul li.submenu > ul {
-    display: none;
-    position: absolute;
-    top: 20px;        /* baja el menú */
-    left: 0;
-    background-color: rgb(115, 116, 113);  /* fondo para que se vea */
-    list-style: none;
-    
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #ff6b6b;
+  list-style: none;
 }
 
-/* Cuando paso el mouse por el li, aparece */
 header nav ul li.submenu:hover > ul {
-    display: block;
+  display: block;
 }
 
-header nav ul li a{
-    text-decoration: none; 
-    color: rgb(29, 28, 28);
-} 
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(29, 28, 28);
+}
 
+.hamburguesa {
+  display: none;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.centro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+.centro .logo img {
+  width: 80px;
+}
+.centro .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.centro .submenu .dropdown {
+  display: none;
+  position: absolute;
+}
+.centro .hamburguesa {
+  display: none;
+}
+
+/* Carpeta pages*/
+.contacto,
+.contacto-clean {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  gap: 60px;
+  padding: 80px 100px;
+  background-color: #fafafa;
+}
+
+.contacto-info,
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 60px;
+  justify-content: center;
+  animation: slideUpFade 0.9s ease forwards;
+}
+
+.contacto-info h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.contacto-info p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.contacto-imagen {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.contacto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomFade 1.2s ease forwards;
+  display: block;
+}
+.contacto-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+}
+
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 2px rgba(47, 92, 105, 0.15);
+  transition: all 0.3s ease;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contacto-form input, .contacto-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 .home-body {
-    background-color: #4e4b4e;
+  background-color: rgba(104, 153, 175, 0.5764705882);
 }
 
-
-/*main/ grilla de imagenes*/
-.grilla {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-areas:
-"portafolio3 portfolio2"
-"portafolio3 portfolio4"
-"portafolio1 portfolio4";
-width: 100%;
-gap: 20px;
-justify-content: center;
-margin-top: 30px;
+.recetas-principales {
+  padding: 60px 10%;
+  text-align: center;
 }
 
-.caja1 { 
-    grid-area:portafolio1;
-}
-.caja2 {
-    grid-area:portfolio2;
-}
-.caja3 {
-    grid-area:portfolio3;
-}
-.caja4 {
-    grid-area:portafolio4;
+.recetas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
-.grilla div img {
-    width: 100%;
-    object-fit: cover;
-    height: auto;
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.card h3 {
+  padding: 20px;
+}
+.card p {
+  padding: 0 15px 20px;
 }
 
+.bloques-cocina {
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 
+.bloque {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: aparecer 1s ease forwards;
+}
+.bloque.invertido {
+  flex-direction: row-reverse;
+}
+.bloque:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.bloque:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.bloque:nth-child(3) {
+  animation-delay: 0.8s;
+}
 
+.bloque-img img {
+  width: 100%;
+  max-width: 650px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.bloque-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
 
+.bloque-texto {
+  max-width: 500px;
+}
+.bloque-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
 
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Carpeta sections*/
+.principal {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+.principal img {
+  width: 80%;
+  height: 1500px;
+  object-fit: cover;
+  animation: zoomHero 12s ease-in-out infinite alternate;
+}
+.principal .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+.principal .texto-principal {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  animation: textoHero 1.5s ease forwards;
+}
+.principal .texto-principal h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.principal .texto-principal p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
 
-    @media (max-width: 775px){
-    header .hamburguesa{
-        display: block; 
-    }
-    header nav {
-        display: none;
-    } 
-    }
+@keyframes zoomHero {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+@keyframes textoHero {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.principal {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.principal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.principal .texto-principal {
+  position: absolute; /* importante para centrar sobre la imagen */
+  top: 50%; /* centra vertical */
+  left: 50%; /* centra horizontal */
+  transform: translate(-50%, -50%); /* ajusta al centro exacto */
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+}
+.principal .texto-principal h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.principal .texto-principal p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.principal .texto-principal .btn-principal {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.principal .texto-principal .btn-principal:hover {
+  background-color: #ff3b3b;
+}
+
+.principal {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.principal .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.principal .texto-principal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+}
+
+/* Carpeta utilities*/
+.center-text {
+  text-align: center !important;
+}
+
+.rounded-img {
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
